@@ -45,6 +45,7 @@
         .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
             font-size: 16px;
         }
+
         .dropbtn {
             background-color: #4CAF50;
             color: white;
@@ -78,16 +79,18 @@
                     background-color: #ddd;
                 }
 
-        .dropdown:hover{
+        .dropdown:hover {
             cursor: pointer;
         }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
 
-        .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
-        }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
+
         h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
             line-height: 1.5;
             color: #000000;
@@ -95,13 +98,17 @@
             /*font-family: "Playfair Display", Calibri, serif;*/
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+        .services-wrap:hover::after {
+            opacity: .2;
+        }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="max-height:70px;">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="height:75px;">
         <div class="container">
-            <img id="logo" src="images/logowhite.png" />
+            <img id="logo" src="images/logowhite.png" style="height:65px;" />
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
@@ -110,15 +117,15 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="index.html" class="nav-link">Trang chủ</a></li>
                     <li class="nav-item dropdown">
-                            <a class="nav-link">Phòng</a>
-                            <div class="dropdown-content" style="width: 220px;margin-top:-5px;">
-                                <a href="#">Phòng thường</a>
-                                <a href="#">Phòng gia đình</a>
-                                <a href="#">Phòng sang trọng</a>
-                                <a href="#">Phòng cổ điển</a>
-                                <a href="#">Phòng họp</a>
-                                <a href="#">Phòng hạng thương gia</a>
-                            </div>
+                        <a class="nav-link">Phòng</a>
+                        <div class="dropdown-content" style="width: 220px;margin-top:-5px;">
+                            <a href="#">Phòng thường</a>
+                            <a href="#">Phòng gia đình</a>
+                            <a href="#">Phòng sang trọng</a>
+                            <a href="#">Phòng cổ điển</a>
+                            <a href="#">Phòng họp</a>
+                            <a href="#">Phòng hạng thương gia</a>
+                        </div>
                     </li>
                     <li class="nav-item"><a href="index.html" class="nav-link">Nhà hàng</a></li>
                     <li class="nav-item"><a href="index.html" class="nav-link">Dịch vụ</a></li>
@@ -285,21 +292,21 @@
         <div class="container container-full-with">
             <div class="row no-gutters">
                 <div class="col-md-3">
-                    <a href="#" class="services-wrap img align-items-end d-flex" style="background-image: url(images/room-3.jpg);">
+                    <a id="room" href="#" class="services-wrap img align-items-end d-flex" style="background-image: url(images/room-3.jpg);">
                         <div class="text text-center pb-2">
                             <h3 style="font-family:'Times New Roman', Times, serif">Không gian sang trọng</h3>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="#" class="services-wrap img align-items-end d-flex" style="background-image: url(images/swimming-pool.jpg);">
+                    <a id="hoboi" href="#" class="services-wrap img align-items-end d-flex" style="background-image: url(images/swimming-pool.jpg);">
                         <div class="text text-center pb-2">
                             <h3 style="font-family:'Times New Roman', Times, serif">Hồ bơi sang chảnh</h3>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="#" class="services-wrap img align-items-end d-flex" style="background-image: url(images/resto.jpg);">
+                    <a id="amthuc" href="#" class="services-wrap img align-items-end d-flex" style="background-image: url(images/resto.jpg);">
                         <div class="text text-center pb-2">
                             <h3 style="font-family:'Times New Roman', Times, serif">Ẩm thực nước Pháp</h3>
                         </div>
@@ -408,7 +415,7 @@
                     <div class="room-wrap">
                         <div class="img d-flex align-items-center" style="background-image: url(images/khach-san-nikko-ha-noi-33.jpg);">
                             <div class="text text-center px-4 py-4">
-                                <h2>Welcome to <a href="index.html" style="color:honeydew;">Maianh Garden</a> Hotel</h2>
+                                <h2>Welcome to <a href="index.html" style="color:honeydew;">Haluxe Garden</a> Hotel</h2>
                                 <p>Hồi tưởng lại quá khứ để dấn thân vào một hành trình mới</p>
                             </div>
                         </div>
@@ -420,7 +427,7 @@
                         <div class="half left-arrow d-flex align-items-center">
                             <div class="text p-4 p-xl-5 text-center">
                                 <p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-                                <p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">/ ngày</span></p>
+                                <p class="mb-0"><span class="price mr-1">$80.00</span> <span class="per">/ ngày</span></p>
                                 <h3 class="mb-3"><a href="rooms.html">Phòng thường</a></h3>
                                 <p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">Xem chi tiết <span class="icon-long-arrow-right"></span></a></p>
                             </div>
@@ -434,7 +441,7 @@
                         <div class="half right-arrow d-flex align-items-center">
                             <div class="text p-4 p-xl-5 text-center">
                                 <p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-                                <p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">/ ngày</span></p>
+                                <p class="mb-0"><span class="price mr-1">$200.00</span> <span class="per">/ ngày</span></p>
                                 <h3 class="mb-3"><a href="rooms.html">Phòng gia đình</a></h3>
                                 <p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">Xem chi tiết <span class="icon-long-arrow-right"></span></a></p>
                             </div>
@@ -447,7 +454,7 @@
                         <div class="half right-arrow d-flex align-items-center">
                             <div class="text p-4 p-xl-5 text-center">
                                 <p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-                                <p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">/ ngày</span></p>
+                                <p class="mb-0"><span class="price mr-1">$450.00</span> <span class="per">/ ngày</span></p>
                                 <h3 class="mb-3"><a href="rooms.html">Phòng sang trọng</a></h3>
                                 <p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">Xem chi tiết <span class="icon-long-arrow-right"></span></a></p>
                             </div>
@@ -461,7 +468,7 @@
                         <div class="half left-arrow d-flex align-items-center">
                             <div class="text p-4 p-xl-5 text-center">
                                 <p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-                                <p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">/ ngày</span></p>
+                                <p class="mb-0"><span class="price mr-1">$200.00</span> <span class="per">/ ngày</span></p>
                                 <h3 class="mb-3"><a href="rooms.html">Phòng cổ điển</a></h3>
                                 <p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">Xem chi tiết <span class="icon-long-arrow-right"></span></a></p>
                             </div>
@@ -474,7 +481,7 @@
                         <div class="half left-arrow d-flex align-items-center">
                             <div class="text p-4 p-xl-5 text-center">
                                 <p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-                                <p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">/ ngày</span></p>
+                                <p class="mb-0"><span class="price mr-1">$1200.00</span> <span class="per">/ ngày</span></p>
                                 <h3 class="mb-3"><a href="rooms.html">Phòng thương gia</a></h3>
                                 <p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">Xem chi tiết <span class="icon-long-arrow-right"></span></a></p>
                             </div>
@@ -523,7 +530,7 @@
                                         </div>
                                         <div class="text text-center">
                                             <p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-                                            <p class="mb-4">Nổi tiếng sau vai Hà Lan trong Mắt biếc, Trúc Anh là phát hiện mới của điện ảnh Việt năm 2019. Những cảnh phải thể hiện nội tâm sâu sắc, Trúc Anh diễn xuất còn non. Nhưng với cô gái 21 tuổi không được đào tạo bài bản về diễn xuất lại ít kinh nghiệm thì xét tổng thể, cô đã thể hiện khá tròn trịa khi vào vai Hà Lan..</p>
+                                            <p class="mb-4">Không gian vô cùng sang trọng. Nhân viên phục vụ rất chuyên nghiệp. Tôi thích nhất là khu mini bar của khách sạn. Đồ uống rất ngon và giá cả cũng phù hợp. Anh đứng quầy cũng rất vui tính. Nói chung khách sạn rất tốt. Có cơ hội chắc chắn tôi sẽ quay lại. Trúc Anh!</p>
                                             <p class="name">Trúc Anh</p>
                                             <span class="position">Guests</span>
                                         </div>
@@ -538,7 +545,7 @@
                                         </div>
                                         <div class="text text-center">
                                             <p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-                                            <p class="mb-4">Nhân viên chuyên nghiệp. Trước khi book mình có liên hệ thì được nhân viên trả lời rất nhanh nên rất hài lòng. Mình book trên agoda được giảm giá. Gia đình mình đã có 2 đêm ở ksan 4 sao giá tốt có buffet. Mình đề nghị ksan nên có món baked potato or chips và menu buffet sáng phong phú hơn thì pêrfect. Những ai đến Đà Lạt nên trải nghiệm ít nhất 1 lần ở du parc hotel để cảm nhận ksan cổ French colonial style. Rất đẹp rất cổ từ quạt trần, máy sấy tóc cổ, đặc biệt thang máy cổ rất đẹp và đèn sấy khô quân Áo và sàn nhà tắm ko bị tron trượt rất khác biệt và tốt hơn ksan 4.5star ở Đà Lạt. Mình hài lòng tất cả đặc biệt nhân viên dược train rất tốt và chuyên nghiệp từ bellmen cho đến salesman... Mình muốn góp ý về món ăn buffet poridge n pork n chicken soup n Bún riêu và noodle ko ngon. Ksan thêm beef thì OK và những món đã nói cần nấu ngon hơn cho đúng tieu chuẩn 4 sao. Lần sau đến Đà Lạt chắc chan sẽ ở tiếp. My kid likes the old style of the life at đủ parc hotel we can't find the same...</p>
+                                            <p class="mb-4">Nhân viên chuyên nghiệp. Trước khi book mình có liên hệ thì được nhân viên trả lời rất nhanh nên rất hài lòng. Mình book trên agoda được giảm giá. Gia đình mình đã có 2 đêm ở ksan 4 sao giá tốt có buffet. Mình đề nghị ksan nên có món baked potato or chips và menu buffet sáng phong phú hơn thì pêrfect. Những ai đến Đà Lạt nên trải nghiệm ít nhất 1 lần ở du parc hotel để cảm nhận ksan cổ French colonial style. Rất đẹp rất cổ từ quạt trần, máy sấy tóc cổ, đặc biệt thang máy cổ rất đẹp và đèn sấy khô quân Áo và sàn nhà tắm ko bị tron trượt rất khác biệt và tốt hơn ksan 4.5star ở Đà Lạt. Mình hài lòng tất cả.</p>
                                             <p class="name">Sam</p>
                                             <span class="position">Guests</span>
                                         </div>
@@ -553,7 +560,7 @@
                                         </div>
                                         <div class="text text-center">
                                             <p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-                                            <p class="mb-4">Chi Pu là một nữ diễn viên, ca sĩ, nhà sản xuất phim, người mẫu ảnh, người dẫn chương trình kiêm diễn viên lồng tiếng nổi tiếng người Việt Nam. Cô được công chúng biết đến sau khi lọt vào top 20 của "Miss Teen Vietnam 2009".</p>
+                                            <p class="mb-4">Chi có một trải nghiệm rất tuyệt vời ở Haluxe. Mọi thứ ở đây đề rất sạch sẽ, gọn gàng và đầy đủ. Các dịch vụ đều rất chuyên nghiệp. Chi thường hay đi lưu diễn ở Hà Nội, và lần nào Chi cũng chọn khách sạn vì ở đây, chi luôn tìm được không gian thoải mái nhất sau những giờ làm việc căng thẳng. Chúc Haluxe luôn luôn như vậy.</p>
                                             <p class="name">Chipu</p>
                                             <span class="position">Guests</span>
                                         </div>
@@ -568,7 +575,7 @@
                                         </div>
                                         <div class="text text-center">
                                             <p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-                                            <p class="mb-4">Đặng Thị Mỹ Dung hay còn được biết đến với nghệ danh Midu là một nữ diễn viên, người mẫu ảnh kiêm doanh nhân người Việt Nam. Cô từng tham gia phim điện ảnh Thiên mệnh anh hùng của đạo diễn Victor Vũ..</p>
+                                            <p class="mb-4">Midu rất bất ngờ về sự phục vụ của khách sạn. mọi thứ thật chu đáo và chuyên nghiệp. Midu rất ấn tượng với đội ngũ Spa của khách sạn, họ đem đến cho Midu không gian thư giãn tuyệt vời nhất giữa lòng Hà Nội. </p>
                                             <p class="name">Midu</p>
                                             <span class="position">Guests</span>
                                         </div>
@@ -618,7 +625,7 @@
                         <div class="desc pr-3 text-md-right">
                             <div class="d-md-flex text align-items-center">
                                 <h3 class="order-md-last heading-left"><span>Cua nướng hành tây</span></h3>
-                                <span class="price price-left">$20.00</span>
+                                <span class="price price-left">$19.00</span>
                             </div>
                             <div class="d-block">
                                 <p>Các loại berry Saskatoon, được biết đến và yêu thích trên khắp Saskatchewan. Những quả mọng này là tuyệt vời như rượu vang, bánh và mứt, bạn có thể thưởng thức nó ngay tại đây?</p>
@@ -642,7 +649,7 @@
                         <div class="desc pr-3 text-md-right">
                             <div class="d-md-flex text align-items-center">
                                 <h3 class="order-md-last heading-left"><span>Gà sốt vang (Coq au vin)</span></h3>
-                                <span class="price price-left">$20.00</span>
+                                <span class="price price-left">$25.00</span>
                             </div>
                             <div class="d-block">
                                 <p>Coq au vin là một trong những món truyền thống của ẩm thực Pháp. Món ăn này được chế biến khá đơn giản bằng cách om thịt gà với rượu vang, bơ, thịt xông khói, hành tây và tỏi. Độ đậm đà của nước sốt vang phụ thuộc vào khẩu vị của từng người, từng vùng.</p>
@@ -669,7 +676,7 @@
                         <div class="desc pl-3">
                             <div class="d-md-flex text align-items-center">
                                 <h3><span>Ốc sên nướng (Escargot)</span></h3>
-                                <span class="price">$49.91</span>
+                                <span class="price">$49.00</span>
                             </div>
                             <div class="d-block">
                                 <p>Ốc sên là món ăn được người Pháp đặc biệt yêu thích và trở thành món ngon truyền thống trong văn hóa ẩm thực nước Pháp. Đây là món ăn lạnh thường được phục vụ trước trên bàn ăn trong mỗi lễ hội ở Pháp.</p>
@@ -681,7 +688,7 @@
                         <div class="desc pl-3">
                             <div class="d-md-flex text align-items-center">
                                 <h3><span>Súp hải sản kiểu Pháp (Bouillabaisse)</span></h3>
-                                <span class="price">$20.00</span>
+                                <span class="price">$30.00</span>
                             </div>
                             <div class="d-block">
                                 <p>Súp hải sản Bouillabaisse là một món ăn truyền thống bắt nguồn từ thành phố Marseilles, miền Nam nước Pháp. Bouillabaisse nấu với các loại thảo mộc đặc biệt như nghệ tây, tỏi, vỏ cam zest, lá nguyệt quế (bay leaf) và thì là (fennel) rất tốt cho sức khỏe.</p>
@@ -705,7 +712,7 @@
                         <div class="desc pl-3">
                             <div class="d-md-flex text align-items-center">
                                 <h3><span>capuchino</span></h3>
-                                <span class="price">$20.00</span>
+                                <span class="price">$10.00</span>
                             </div>
                             <div class="d-block">
                                 <p>Cappuccino là một cách pha chế cà phê của Ý. Một cà phê cappuccino bao gồm ba phần đều nhau: cà phê espresso pha với một lượng nước gấp đôi, sữa nóng và sữa sủi bọt.</p>
@@ -835,7 +842,7 @@
         </div>
     </section>
 
-    
+
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
         <div class="container">
@@ -888,7 +895,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </footer>
 
@@ -916,6 +923,24 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $("#room").hover(function () {
+            $(this).css("background-image", "url(images/giphyRoom.gif)");
+        }, function () {
+            $(this).css("background-image", "url(images/room-3.jpg)");
+        });
 
+        $("#hoboi").hover(function () {
+            $(this).css("background-image", "url(images/giphyHoBoi.gif)");
+        }, function () {
+            $(this).css("background-image", "url(images/swimming-pool.jpg)");
+        });
+
+        $("#amthuc").hover(function () {
+            $(this).css("background-image", "url(images/giphyAmThuc.gif)");
+        }, function () {
+            $(this).css("background-image", "url(images/resto.jpg)");
+        });
+    </script>
 </body>
 </html>

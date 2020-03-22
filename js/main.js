@@ -164,20 +164,23 @@
 			var $w = $(this),
 					st = $w.scrollTop(),
 					navbar = $('.ftco_navbar'),
-					sd = $('.js-scroll-wrap');
-
+                sd = $('.js-scroll-wrap');
+            //$('#logo').attr("src", "images/logowhite.png")
 			if (st > 150) {
-				if ( !navbar.hasClass('scrolled') ) {
+                if (!navbar.hasClass('scrolled')) {
+                    $('#logo').attr("src","images/logoblack.png")
 					navbar.addClass('scrolled');	
 				}
-			} 
+			}
 			if (st < 150) {
-				if ( navbar.hasClass('scrolled') ) {
+                if (navbar.hasClass('scrolled')) {
+                    $('#logo').attr("src", "images/logowhite.png")
 					navbar.removeClass('scrolled sleep');
 				}
 			} 
 			if ( st > 350 ) {
-				if ( !navbar.hasClass('awake') ) {
+                if (!navbar.hasClass('awake')) {
+                    $('#logo').attr("src", "images/logoblack.png")
 					navbar.addClass('awake');	
 				}
 				
@@ -186,7 +189,8 @@
 				}
 			}
 			if ( st < 350 ) {
-				if ( navbar.hasClass('awake') ) {
+                if (navbar.hasClass('awake')) {
+                    $('#logo').attr("src", "images/logoblack.png")
 					navbar.removeClass('awake');
 					navbar.addClass('sleep');
 				}
